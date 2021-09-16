@@ -1,0 +1,76 @@
+{
+  "name": "@ets-skel/client",
+  "version": "0.4.1",
+  "main": "./dist/index.js",
+  "type": "commonjs",
+  "typings": "./dist/index.d.ts",
+  "license": "MIT",
+  "repository": "https://github.com/ets-skel/ets-skel-webapp",
+  "resolutions": {
+    "typescript": "^4.4.3"
+  },
+  "peerDependencies": {
+    "@effect-ts-app/core": "^0.39.0",
+    "@effect-ts/core": "^0.44.4",
+    "@effect-ts/fluent": "^0.3.12",
+    "@effect-ts/fluent-node": "^0.1.2",
+    "@effect-ts/monocle": "^0.35.0"
+  },
+  "dependencies": {
+    "@ets-skel/types": "^0.4.1",
+    "cross-fetch": "^3.1.4",
+    "path-parser": "^6.1.0"
+  },
+  "devDependencies": {
+    "@jest/globals": "^27.2.0"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./*": "./src/*.ts",
+    "./Me": "./src/Me/index.ts",
+    "./Me/*": "./src/Me/*.ts",
+    "./Me/Feed": "./src/Me/Feed/index.ts",
+    "./Me/Feed/*": "./src/Me/Feed/*.ts",
+    "./PurchaseOrders": "./src/PurchaseOrders/index.ts",
+    "./PurchaseOrders/*": "./src/PurchaseOrders/*.ts",
+    "./PurchaseOrders/Contacts": "./src/PurchaseOrders/Contacts/index.ts",
+    "./PurchaseOrders/Contacts/*": "./src/PurchaseOrders/Contacts/*.ts",
+    "./PurchaseOrders/Feed": "./src/PurchaseOrders/Feed/index.ts",
+    "./PurchaseOrders/Feed/*": "./src/PurchaseOrders/Feed/*.ts",
+    "./PurchaseOrders/Folders": "./src/PurchaseOrders/Folders/index.ts",
+    "./PurchaseOrders/Folders/*": "./src/PurchaseOrders/Folders/*.ts",
+    "./PurchaseOrders/Folders/Files": "./src/PurchaseOrders/Folders/Files/index.ts",
+    "./PurchaseOrders/Folders/Files/*": "./src/PurchaseOrders/Folders/Files/*.ts",
+    "./PurchaseOrders/Machine": "./src/PurchaseOrders/Machine/index.ts",
+    "./PurchaseOrders/Machine/*": "./src/PurchaseOrders/Machine/*.ts",
+    "./PurchaseOrders/Milestones": "./src/PurchaseOrders/Milestones/index.ts",
+    "./PurchaseOrders/Milestones/*": "./src/PurchaseOrders/Milestones/*.ts",
+    "./PurchaseOrders/Milestones/Files": "./src/PurchaseOrders/Milestones/Files/index.ts",
+    "./PurchaseOrders/Milestones/Files/*": "./src/PurchaseOrders/Milestones/Files/*.ts",
+    "./Companies": "./src/Companies/index.ts",
+    "./Companies/*": "./src/Companies/*.ts",
+    "./Companies/Users": "./src/Companies/Users/index.ts",
+    "./Companies/Users/*": "./src/Companies/Users/*.ts",
+    "./Companies/Feed": "./src/Companies/Feed/index.ts",
+    "./Companies/Feed/*": "./src/Companies/Feed/*.ts",
+    "./shared/*": "./src/shared/*.ts"
+  },
+  "scripts": {
+    "build": "sh ../../scripts/clean-dist.sh src/ && yarn tsc --build",
+    "watch": "tsc --build --watch",
+    "watch2": "tsc -w",
+    "prepare": "yarn build",
+    "clean": "rm -rf dist",
+    "circular": "madge --circular --ts-config ./tsconfig.json --extensions ts ./src",
+    "compile": "tsc --noEmit",
+    "lint": "eslint ./src",
+    "prettier": "prettier \"src/**/*.ts\"",
+    "autofix": "yarn lint --fix && yarn prettier --write",
+    "test": "echo 'no tests yet'",
+    "testsuite": "yarn lint && yarn test && yarn circular",
+    "client": "node --experimental-specifier-resolution=node -r source-map-support/register -r @effect-ts/system/Tracing/Enable ./dist/client.bin.js",
+    "ncu": "ncu"
+  },
+  "gitHead": "bd8e27eea3eff97db8739d577d67e7336c078d28",
+  "sideEffects": false
+}

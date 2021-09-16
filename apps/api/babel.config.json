@@ -1,0 +1,21 @@
+{
+  // only transform the ESM modules...
+  // "plugins": [
+  //   "@babel/plugin-proposal-export-namespace-from",
+  //   "@babel/plugin-transform-modules-commonjs"
+  // ]
+  "plugins": [["@babel/plugin-proposal-decorators", { "legacy": true }]],
+  "presets": [
+    // we must follow this order with typescript last, to fix class constructor auto assign fields.
+    [
+      "@babel/preset-env",
+      {
+       "modules": "commonjs",
+        "targets": {
+          "esmodules": false
+        }
+      }
+    ],
+    ["@babel/preset-typescript"]
+  ]
+}

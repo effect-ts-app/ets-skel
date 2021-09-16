@@ -1,0 +1,69 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "target": "es2020",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "jsx": "preserve",
+    "downlevelIteration": true,
+    "removeComments": true,
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "tsBuildInfoFile": "./tsconfig.tsbuildinfo",
+    "paths": {
+      "@ets-skel/client": [
+        "../../packages/client/src"
+      ],
+      "@ets-skel/client/*": [
+        "../../packages/client/src/*"
+      ],
+      "@ets-skel/types": [
+        "../../packages/types/src"
+      ],
+      "@ets-skel/types/*": [
+        "../../packages/types/src/*"
+      ],
+      "@_config": ["./_config"],
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "types": [
+      "@effect-ts-app/fluent/types/browser",
+      "@effect-ts-app/fluent/types/Prelude"
+    ],
+    "plugins": [
+      {
+        "transform": "@effect-ts/tracing-plugin",
+      }
+    ],
+    "isolatedModules": true,
+    "noEmit": true
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "references": [
+    {
+        "path": "../../packages/types"
+    },
+    {
+        "path": "../../packages/client"
+    }
+  ]
+}

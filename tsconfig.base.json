@@ -1,0 +1,51 @@
+{
+    "compilerOptions": {
+        "module": "ESNext",
+        "lib": [
+            "ES2020"
+        ],
+        "target": "es2020",
+        // inline source maps stay better in sync with the source, which should aid with watchers.
+        //"sourceMap": true,
+        "inlineSourceMap": true,
+        "incremental": true,
+        "composite": true,
+        "declarationMap": true,
+        "allowJs": false,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "skipLibCheck": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "outDir": "build/dist",
+        "esModuleInterop": true,
+        "strict": true,
+        "resolveJsonModule": true,
+        "moduleResolution": "node",
+        "downlevelIteration": true
+    },
+    "watchOptions": {
+        // Use native file system events for files and directories
+        // This actually detect changes in parent directories ... not great!
+        // however it seems that the response is very fast on the non-related projects figuring out their files are unchanged...
+        // "watchFile": "useFsEvents",
+        "watchDirectory": "useFsEvents",
+        //     // Poll files for updates more frequently
+        //     // when they're updated a lot.
+        "fallbackPolling": "dynamicPriority",
+        "excludeDirectories": [
+            "**/node_modules",
+            "**/dist",
+            "**/.build"
+        ],
+    },
+    "files": [],
+    "include": [],
+    "exclude": [
+        ".jest-cache",
+        "node_modules",
+        "build",
+        "lib",
+        "dist"
+    ]
+}

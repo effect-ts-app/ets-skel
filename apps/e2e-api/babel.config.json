@@ -1,0 +1,20 @@
+{
+  // only transform the ESM modules...
+  // "plugins": [
+  //   "@babel/plugin-proposal-export-namespace-from",
+  //   "@babel/plugin-transform-modules-commonjs"
+  // ]
+  "plugins": [["@babel/plugin-proposal-decorators", { "legacy": true }]],
+  "presets": [
+    ["@babel/preset-typescript"],
+    [
+      "@babel/preset-env",
+      {
+       "modules": "commonjs",
+        "targets": {
+          "esmodules": false
+        }
+      }
+    ]
+  ]
+}

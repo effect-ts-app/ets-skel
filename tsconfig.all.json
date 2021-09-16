@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.base.json",
+  "include": [],
+  "exclude": [],
+  "references": [
+    {
+      "path": "apps/api"
+    },
+    {
+      "path": "apps/e2e-api"
+    },
+    {
+      "path": "apps/frontend"
+    },
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "name": "@ets-skel/types",
+  "version": "0.4.1",
+  "main": "./dist/index.js",
+  "type": "commonjs",
+  "typings": "./dist/index.d.ts",
+  "license": "MIT",
+  "repository": "https://github.com/ets-skel/ets-skel-webapp",
+  "resolutions": {
+    "typescript": "^4.4.3"
+  },
+  "dependencies": {
+    "uuid": "^8.3.2",
+    "validator": "^13.6.0"
+  },
+  "peerDependencies": {
+    "@effect-ts-app/core": "^0.39.0",
+    "@effect-ts/core": "^0.44.4",
+    "@effect-ts/fluent": "^0.3.12",
+    "@effect-ts/monocle": "^0.35.0",
+    "lodash": "^4.17.21"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./*": "./src/*.ts",
+    "./_ext": "./src/_ext/index.ts",
+    "./_ext/*": "./src/_ext/*.ts",
+    "./schema": "./src/schema/index.ts",
+    "./PurchaseOrder": "./src/PurchaseOrder/index.ts",
+    "./PurchaseOrder/*": "./src/PurchaseOrder/*.ts"
+  },
+  "devDependencies": {
+    "@types/validator": "^13.6.3",
+    "@jest/globals": "^27.2.0",
+    "@types/faker": "^5.5.8",
+    "@types/uuid": "^8.3.1",
+    "faker": "^5.5.3"
+  },
+  "scripts": {
+    "build": "sh ../../scripts/clean-dist.sh src/ && tsc --build",
+    "watch": "tsc --build --watch",
+    "watch2": "tsc -w",
+    "prepare": "yarn build",
+    "clean": "rm -rf dist",
+    "circular": "madge --circular --ts-config ./tsconfig.json --extensions ts ./src",
+    "compile": "tsc --noEmit",
+    "lint": "eslint ./src",
+    "prettier": "prettier \"src/**/*.ts\"",
+    "autofix": "yarn lint --fix && yarn prettier --write",
+    "test": "jest",
+    "testsuite": "yarn lint && yarn test && yarn circular",
+    "ncu": "ncu"
+  },
+  "gitHead": "bd8e27eea3eff97db8739d577d67e7336c078d28",
+  "sideEffects": [
+    "./faker.ts",
+    "./faker",
+    "./src/faker",
+    "./dist/faker",
+    "./src/faker.ts",
+    "./dist/faker.js"
+  ]
+}

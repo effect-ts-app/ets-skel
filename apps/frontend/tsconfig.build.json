@@ -1,0 +1,48 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./",
+    "composite": false,
+    "declaration": false,
+    "declarationMap": false,
+    "noEmit": false,
+    "tsBuildInfoFile": "tsconfig.build.tsbuildinfo",
+    "paths": {
+      // TODO: we need these paths for nextjs build, but we don't want to use them
+      // during development (we dont want to import from them)
+      "@ets-skel/client": [
+        "../../packages/client/src"
+      ],
+      "@ets-skel/client/*": [
+        "../../packages/client/src/*"
+      ],
+      "@ets-skel/types": [
+        "../../packages/types/src"
+      ],
+      "@ets-skel/types/*": [
+        "../../packages/types/src/*"
+      ],
+      "@_config": ["./_config"],
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "types": [
+      "@effect-ts-app/fluent/types/browser",
+      "@effect-ts-app/fluent/types/Prelude"
+    ],
+    "plugins": [
+      {
+        "transform": "@effect-ts/tracing-plugin",
+      }
+    ]
+  },
+  "references": [
+    {
+        "path": "../../packages/types"
+    },
+    {
+        "path": "../../packages/client"
+    }
+  ]
+}

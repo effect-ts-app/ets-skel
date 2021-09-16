@@ -1,0 +1,18 @@
+{
+    "ignore": [
+        "node_modules",
+        ".git",
+        "*.test.js",
+        "*.test.ts",
+        "openapi.json",
+        "dist"
+    ],
+    "ext": "ts,env,local",
+    "watch": [
+        "../../packages/*/src",
+        ".",
+        ".env",
+        ".env.local"
+    ],
+    "delay": 250
+}

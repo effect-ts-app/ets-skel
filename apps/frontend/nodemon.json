@@ -1,0 +1,13 @@
+{
+    "ignore": [
+        "node_modules",
+        ".git",
+        "*.test.js"
+    ],
+    "watch": [
+        "next.config.js",
+        ".env",
+        ".env.local"
+    ],
+    "delay": 400
+}

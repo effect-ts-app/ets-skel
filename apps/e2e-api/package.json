@@ -1,0 +1,34 @@
+{
+    "name": "@ets-skel/e2e-api",
+    "version": "0.0.1",
+    "main": "index.ts",
+    "type": "module",
+    "license": "MIT",
+    "private": true,
+    "scripts": {
+        "circular": "madge --circular --ts-config ./tsconfig.json --extensions ts -x dist/ ./",
+        "clean": "rm -rf dist",
+        "build": "tsc --build",
+        "watch": "yarn build --watch",
+        "watch2": "tsc -w",
+        "compile": "tsc --noEmit",
+        "lint": "eslint .",
+        "prettier": "prettier \"**/*.ts\"",
+        "autofix": "yarn lint --fix && yarn prettier --write",
+        "test": "jest",
+        "testsuite": "yarn lint && yarn test && yarn circular",
+        "ncu": "ncu",
+        "update-libs": "yarn ncu -u --filter \"@ets-skel/*\" --pre 1"
+    },
+    "resolutions": {
+        "typescript": "^4.4.3"
+    },
+    "dependencies": {
+        "@ets-skel/client": "^0.4.1",
+        "@ets-skel/types": "^0.4.1"
+    },
+    "devDependencies": {
+        "@jest/globals": "^27.2.0",
+        "require-json5": "^1.1.0"
+    }
+}
