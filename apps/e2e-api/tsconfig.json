@@ -1,0 +1,72 @@
+{
+    "extends": "../../tsconfig.base.json",
+    "compilerOptions": {
+        "lib": [
+            "dom",
+            "esnext"
+        ],
+        "esModuleInterop": true,
+        "baseUrl": "./",
+        // keep in here, cause madge can't detect it from extended tsconfig
+        "moduleResolution": "node",
+        "paths": {
+            "@Nomizz-com/client": [
+                "../../packages/client/src"
+            ],
+            "@Nomizz-com/client/*": [
+                "../../packages/client/src/*"
+            ],
+            "@Nomizz-com/types": [
+                "../../packages/types/src"
+            ],
+            "@Nomizz-com/types/*": [
+                "../../packages/types/src/*"
+            ],
+            // this will point to the wrong folder at runtime, (dist/../api)
+            // but jest config works around it for tests.
+            "@/*": [
+                "../../apps/api/*"
+            ]
+        },
+        "outDir": "./dist",
+        "tsBuildInfoFile": "./dist/.tsbuildinfo",
+        "removeComments": true,
+        "types": [
+            "@effect-ts-app/fluent/types/node",
+            "@effect-ts-app/fluent/types/Prelude"
+        ],
+        "plugins": [
+            {
+                "transform": "@effect-ts/tracing-plugin"
+            }
+        ]
+    },
+    "include": [
+        "./"
+    ],
+    "exclude": [
+        ".jest-cache",
+        "./dist",
+        "node_modules",
+        "build",
+        "lib",
+        "dist",
+        "**/*.d.ts.map"
+    ],
+    "ts-node": {
+        "require": [
+            "tsconfig-paths/register"
+        ]
+    },
+    "references": [
+        {
+            "path": "../../apps/api"
+        },
+        {
+            "path": "../../packages/types"
+        },
+        {
+            "path": "../../packages/client"
+        }
+    ]
+}
