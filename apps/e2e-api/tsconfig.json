@@ -10,16 +10,16 @@
         // keep in here, cause madge can't detect it from extended tsconfig
         "moduleResolution": "node",
         "paths": {
-            "@Nomizz-com/client": [
+            "@ets-skel/client": [
                 "../../packages/client/src"
             ],
-            "@Nomizz-com/client/*": [
+            "@ets-skel/client/*": [
                 "../../packages/client/src/*"
             ],
-            "@Nomizz-com/types": [
+            "@ets-skel/types": [
                 "../../packages/types/src"
             ],
-            "@Nomizz-com/types/*": [
+            "@ets-skel/types/*": [
                 "../../packages/types/src/*"
             ],
             // this will point to the wrong folder at runtime, (dist/../api)

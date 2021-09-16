@@ -1148,10 +1148,10 @@
     enabled "2.0.x"
     kuler "^2.0.0"
 
-"@effect-ts-app/core@^0.39.0":
-  version "0.39.0"
-  resolved "https://registry.yarnpkg.com/@effect-ts-app/core/-/core-0.39.0.tgz#096dbbd298062277317a31e2fc2b542597711938"
-  integrity sha512-7GW55wINLDEQLQYiZOsvh1PUTMHveUhCbuz68HpRLJTeIM+479FEnJhmFVT2MFkPlN+5nweZHf4ValNXgOWmnA==
+"@effect-ts-app/core@^0.39.2":
+  version "0.39.2"
+  resolved "https://registry.yarnpkg.com/@effect-ts-app/core/-/core-0.39.2.tgz#7352193d8de0bc6f6b4c2d7a31c992730cce62f8"
+  integrity sha512-NDk5x6tgtlvr/Poz0QhNXoMQQlAmVQ+lr5fuTOXn2XdqaC0YZkEsCB4qsK4n8G+b3+FB5ft/sYHQ3oBSBhIH1g==
   dependencies:
     abort-controller "^3.0.0"
     cross-fetch "^3.1.4"
@@ -1166,12 +1166,12 @@
   resolved "https://registry.yarnpkg.com/@effect-ts-app/fluent/-/fluent-0.39.1.tgz#642c6bef556532da7db3ec52d233e3542ee41472"
   integrity sha512-0n0vHhMQWMQkhG754+ndNhUarSCJBxpvK2J4WuE05oDI8pSWH/k+CfKOvOgUJ863uS2d7QMW9DzRlZoMuDJdzQ==
 
-"@effect-ts-app/infra@^0.39.1":
-  version "0.39.1"
-  resolved "https://registry.yarnpkg.com/@effect-ts-app/infra/-/infra-0.39.1.tgz#217f2d70b07b9642c2c41d95a969c0973dbd815d"
-  integrity sha512-CS/C63BAwKABeIgsbmo+jM5Rk3zFjEvrW1N1NMldgbJtEvH8z1NupxmKPQ/dPwDdMNAUVyrgtGgE0N3wrW8THw==
+"@effect-ts-app/infra@^0.39.2":
+  version "0.39.2"
+  resolved "https://registry.yarnpkg.com/@effect-ts-app/infra/-/infra-0.39.2.tgz#fe25f8276fc7ed6b0ab88c27d0d8a457a9f12e73"
+  integrity sha512-M3yACZSlxJU/iriODWJdHNhtIEghH6HR7bvAwjYvxt7vWEOyAiY0iaKhkQI0oZ3YjVFqx870UGqQcm59ZZwyGg==
   dependencies:
-    "@effect-ts-app/core" "^0.39.0"
+    "@effect-ts-app/core" "^0.39.2"
     proper-lockfile "^4.1.2"
     query-string "^7.0.1"
     winston "^3.3.3"
@@ -1198,10 +1198,10 @@
   resolved "https://registry.yarnpkg.com/@effect-ts/fluent/-/fluent-0.3.12.tgz#e89b97ab8c707560b1165406e3626944d60b0619"
   integrity sha512-jLXe/CcXmBpvL6RJ7W7GCs0v+jCToXXt+ViwRrva+ZcjNjRQ6xOq2j+xeHx4EYysxfmzcK26VN+oy7HUNMU1xg==
 
-"@effect-ts/jest@^0.29.0":
-  version "0.29.0"
-  resolved "https://registry.yarnpkg.com/@effect-ts/jest/-/jest-0.29.0.tgz#da7d37bff18003ddf4a08d704896cc7c075d3015"
-  integrity sha512-wPT+7Sg3coE9SGsqZMdD994daaoBTkiMtQNNiT50oOT2pArdOW7otRN3hPPpuXNqvXk0GSX6f1YViyPSfnJ9vA==
+"@effect-ts/jest@^0.30.0":
+  version "0.30.0"
+  resolved "https://registry.yarnpkg.com/@effect-ts/jest/-/jest-0.30.0.tgz#e74fa1fb9d2b26ff06d5e0ea265349ef7db4e29f"
+  integrity sha512-sFQz9u1/mVitrzKouMGL6xm1z5eDHYZoID3Kqf/HC2MsTKIzhZ86iHFqnGvvjvCmodrIbUlhWKRCHlJJh864Qg==
 
 "@effect-ts/monocle@^0.35.0":
   version "0.35.0"
@@ -2662,7 +2662,7 @@
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
 
-"@types/lodash@^4.14.172":
+"@types/lodash@^4.14.173":
   version "4.14.173"
   resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.173.tgz#9d3b674c67a26cf673756f6aca7b429f237f91ed"
   integrity sha512-vv0CAYoaEjCw/mLy96GBTnRoZrSxkGE0BKzKimdR8P3OzrNYNvBgtW7p055A+E8C31vXNUhWKoFCbhq7gbyhFg==
@@ -9104,7 +9104,7 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier@^2.4.0:
+prettier@^2.4.1:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.4.1.tgz#671e11c89c14a4cfc876ce564106c4a6726c9f5c"
   integrity sha512-9fbDAXSBcc6Bs1mZrDYb3XKzDLm4EXXL9sC1LqKP5rZkT6KRr/rf9amVUcODVXgguK/isJz0d0hP72WeaKWsvA==

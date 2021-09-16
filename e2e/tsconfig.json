@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "noEmit": true,
+    "downlevelIteration": true,
+    "lib": [
+      "es5",
+      "dom"
+    ],
+    "types": ["cypress", "cypress-file-upload"]
+  },
+  "include": [
+    "**/*.ts"
+  ]
+}
