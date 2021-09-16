@@ -24,8 +24,8 @@
         "typescript": "^4.4.3"
     },
     "dependencies": {
-        "@ets-skel/client": "^0.4.1",
-        "@ets-skel/types": "^0.4.1"
+        "@ets-skel/client": "*",
+        "@ets-skel/types": "*"
     },
     "devDependencies": {
         "@jest/globals": "^27.2.0",
